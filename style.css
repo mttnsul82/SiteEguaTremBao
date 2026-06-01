@@ -6,6 +6,8 @@ body{
 nav{
     display:flex;
     gap: 30px;
+    text-align: left;
+    margin-left: 200px;
 }
 
 nav ul{
@@ -30,6 +32,7 @@ nav a:hover{
 .btn-reserva{
     background:transparent;
     border: 2px solid white;
+    border-radius: 10px;
     color: white;
     padding:10px 20px;
 }
@@ -43,3 +46,66 @@ header{
     justify-content: space-between;
     padding:0 60px;
 }
+
+.logo{
+    position: absolute;
+    left: 10px;
+    width: 100px;
+    height: auto;
+     text-align: left;
+    margin-left: 30px;
+}
+
+.content{
+    text-align: center;
+}
+.content h1{
+    color:#920501
+}
+
+.btn-cardapio{
+    background-color: #920501;
+    border: 2px solid #920501;
+    border-radius: 10px;
+    color: #f5ebdd;
+    padding:10px 20px;
+}
+
+.hero{
+
+    min-height: 700px;
+
+    text-align: center;
+
+    padding-top: 40px;
+ 
+    background-image: url("img/fundo.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+ 
+.beneficios{
+
+    width: 90%;
+
+    max-width: 1200px;
+ 
+    margin: 80px auto 0 auto;
+ 
+    background: #f8f1e5;
+ 
+    border-radius: 15px;
+ 
+    padding: 25px;
+ 
+    display: flex;
+
+    justify-content: space-between;
+ 
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+
+}
+ 
