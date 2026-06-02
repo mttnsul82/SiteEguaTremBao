@@ -7,7 +7,7 @@ nav{
     display:flex;
     gap: 30px;
     text-align: left;
-    margin-left: 200px;
+    margin-left: 550px;
 }
 
 nav ul{
@@ -29,12 +29,24 @@ nav a:hover{
     opacity:0.7;
 }
 
+.hero{
+    background-image: url("fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 800px;
+
+    padding-top: 80px;
+}
+
 .btn-reserva{
     background:transparent;
     border: 2px solid white;
     border-radius: 10px;
     color: white;
     padding:10px 20px;
+    margin-left: 100px;
 }
 
 header{
@@ -58,9 +70,19 @@ header{
 
 .content{
     text-align: center;
+    margin-top: 80px;
 }
+
 .content h1{
-    color:#920501
+    color:#920501;
+    font-size: 70px;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Cormorant Garamond', cursive;
+}
+
+.content h3{
+    font-family: 'Open Sans';
 }
 
 .btn-cardapio{
@@ -71,41 +93,58 @@ header{
     padding:10px 20px;
 }
 
-.hero{
-
-    min-height: 700px;
-
-    text-align: center;
-
-    padding-top: 40px;
- 
-    background-image: url("img/fundo.png");
-
-    background-size: cover;
-
-    background-position: center;
-
+.btn-cardapio:hover{
+    transform: translateY(-3px);
+    background-color: #c7403b;
+    border: 2px solid #c7403b;
+    color: #f2ddc1;
 }
  
 .beneficios{
+    width: 70%;
+    max-width: 900px;
 
-    width: 90%;
+    margin: 120px auto;
 
-    max-width: 1200px;
- 
-    margin: 80px auto 0 auto;
- 
-    background: #f8f1e5;
- 
-    border-radius: 15px;
- 
-    padding: 25px;
- 
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
     display: flex;
 
     justify-content: space-between;
- 
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
  
+.item{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.item:not(:last-child){
+    border-right: 1px solid #d6c6b1;
+}
+
+.item i{
+    font-size: 30px;
+    color: #920501;
+}
+
+.item h3{
+    color: #920501;
+    margin: 0;
+    font-size: 28px;
+}
+
+.item p{
+    margin-top: 10px;
+    color: #333;
+}
