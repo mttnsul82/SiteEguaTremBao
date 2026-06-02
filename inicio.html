@@ -6,21 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Égua que trem bão!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-
-<style>
-    body {
-        background-image: url("fundo.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        margin: 0;
-        height: 100vh;
-
-    }
-</style>
 
 <body>
 
@@ -41,40 +33,83 @@
 
     <main>
 
-        <div class="content">
-            <h1>O verdadeiro sabor do Brasil</h1>
-            <h3>Uma experiência gastronômica com os melhores pratos da nossa terra, feitos com igredientes selecionados
-                e muito carinho.</h3>
+        <section class="hero">
 
-            <button class="btn-cardapio">Ver cardápio</button>
-        </div>
+            <div class="content">
+                <h1>O verdadeiro sabor do Brasil</h1>
+                <h3>Uma experiência gastronômica com os melhores pratos da nossa terra, feitos com igredientes
+                    selecionados
+                    e muito carinho.</h3>
 
+                <button class="btn-cardapio">Ver cardápio</button>
+            </div>
 
             <section class="beneficios">
 
                 <div class="item">
-                    <h3>Ingredientes frescos</h3>
-                    <p>Selecionados diariamente</p>
+                    <i class="fa-solid fa-leaf"></i>
+                    <div>
+                        <h3>Ingredientes frescos</h3>
+                        <p>Selecionados diariamente</p>
+                    </div>
                 </div>
 
                 <div class="item">
-                    <h3>Receitas tradicionais</h3>
-                    <p>O verdadeiro sabor da nossa cultura</p>
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <div>
+                        <h3>Receitas tradicionais</h3>
+                        <p>O verdadeiro sabor da nossa cultura</p>
+                    </div>
                 </div>
 
                 <div class="item">
-                    <h3>Feito com amor</h3>
-                    <p>Cuidado em cada detalhe</p>
+                    <i class="fa-regular fa-heart"></i>
+                    <div>
+                        <h3>Feito com amor</h3>
+                        <p>Cuidado em cada detalhe</p>
+                    </div>
                 </div>
 
                 <div class="item">
-                    <h3>Ambiente acolhedor</h3>
-                    <p>Perfeito para toda a família</p>
+                    <i class="fa-regular fa-star"></i>
+                    <div>
+                        <h3>Ambiente acolhedor</h3>
+                        <p>Perfeito para toda a família</p>
+                    </div>
                 </div>
 
             </section>
+        </section>
+
+        <section class="destaques">
+
+            <h2>Destaques da Casa</h2>
+
+            <div class="cards-pratos">
+
+                <div class="card-prato">
+                    <img src="tambaqui.jpg">
+                    <h3>Caldeirada de Tambaqui</h3>
+                    <p>Descrição do prato...</p>
+                    <span>R$ 64,90</span>
+                </div>
+
+                <div class="card-prato">
+                    <img src="feijoada.jpg">
+                    <h3>Feijoada Completa</h3>
+                    <p>Descrição do prato...</p>
+                    <span>R$ 49,90</span>
+                </div>
+
+            </div>
+
+            <button>Ver todos os pratos</button>
+
+        </section>
 
     </main>
+
+
 </body>
 
 </html>
