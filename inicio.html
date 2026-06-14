@@ -41,7 +41,10 @@
                     selecionados
                     e muito carinho.</h3>
 
-                <button class="btn-cardapio">Ver cardápio</button>
+                <button class="btn-cardapio"
+                    onclick="document.getElementById('Menu').scrollIntoView({behavior:'smooth'})">
+                    Ver cardápio
+                </button>
             </div>
 
             <section class="beneficios">
@@ -137,150 +140,462 @@
             </div>
 
             <div class="botao-centro">
-                <button class="btn-cardapio">
+                <button class="btn-cardapio"
+                    onclick="document.getElementById('Menu').scrollIntoView({behavior:'smooth'})">
                     Ver todos os pratos
                 </button>
+            </div>
             </div>
 
         </section>
 
         <section class="ofertas">
 
-    <div class="promocoes-box">
+            <div class="promocoes-box">
 
-        <h2>Promoções</h2>
+                <h2>Promoções</h2>
 
-        <div class="linha"></div>
+                <div class="linha"></div>
 
-        <div class="promo-content">
+                <div class="promo-content">
 
-            <div class="promo-img">
-                <img src="almoço especial.png" alt="Almoço Especial">
-                <span class="desconto">15%</span>
+                    <div class="promo-img">
+                        <img src="almoço especial.png" alt="Almoço Especial">
+                        <span class="desconto">15%</span>
+                    </div>
+
+                    <div class="promo-info">
+                        <h3>Almoço Especial</h3>
+
+                        <p>
+                            Qualquer prato principal<br>
+                            + suco natural ou sobremesa
+                        </p>
+
+                        <button class="btn-promo">
+                            Aproveitar
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="promo-info">
-                <h3>Almoço Especial</h3>
 
-                <p>
-                    Qualquer prato principal<br>
-                    + suco natural ou sobremesa
-                </p>
+            <section id="Combos">
+                <div class="combos-box">
 
-                <button class="btn-promo">
-                    Aproveitar
-                </button>
+                    <h2>Combos para compartilhar</h2>
+
+                    <div class="linha"></div>
+
+                    <div class="combos-grid">
+
+                        <div class="combo">
+                            <img src="café da casa.png">
+
+                            <h3>Café da Casa</h3>
+
+                            <p>
+                                Café colonial juntando o melhor
+                                das nossas regiões.
+                            </p>
+                        </div>
+
+                        <div class="combo">
+                            <img src="combo1.png">
+
+                            <h3>Combo 1</h3>
+
+                            <p>
+                                2 pratos principais +
+                                2 acompanhamentos
+                            </p>
+                        </div>
+
+                        <div class="combo">
+                            <img src="combo1.png">
+
+                            <h3>Manhã Leve</h3>
+
+                            <p>
+                                Café colonial para uma pessoa.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+        <section class="mais-vendidos">
+
+            <div class="destaque-item">
+
+                <h2>🔥 Mais Vendido</h2>
+
+                <div class="item-info">
+
+                    <img src="tambaqui.png" alt="Caldeirada">
+
+                    <div>
+                        <h3>Caldeirada de Tambaqui</h3>
+
+                        <p>
+                            Caldeirada amazônica feita com tambaqui
+                            fresco, legumes e temperos regionais,
+                            servida com arroz e pirão.
+                        </p>
+
+                        <span class="valor">R$ 64,90</span>
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
+            <div class="divisor"></div>
 
-    </div>
+            <div class="destaque-item">
 
+                <h2>⭐ Em Destaque</h2>
 
-    <div class="combos-box">
+                <div class="item-info">
 
-        <h2>Combos para compartilhar</h2>
+                    <img src="gateau.png" alt="Gateau">
 
-        <div class="linha"></div>
+                    <div>
+                        <h3>Gateau da Casa</h3>
 
-        <div class="combos-grid">
+                        <p>
+                            Petit gateau com sorvete de
+                            graviola.
+                        </p>
 
-            <div class="combo">
-                <img src="café da casa.png">
+                        <span class="valor">R$ 16,90</span>
+                    </div>
 
-                <h3>Café da Casa</h3>
+                </div>
 
-                <p>
-                    Café colonial juntando o melhor
-                    das nossas regiões.
-                </p>
             </div>
 
-            <div class="combo">
-                <img src="combo1.png">
+        </section>
 
-                <h3>Combo 1</h3>
 
-                <p>
-                    2 pratos principais +
-                    2 acompanhamentos
-                </p>
+        <section id="Sobre">
+            <div class="sobre">
+
+                <div class="estado">
+                    <img src="minas gerais.png" alt="Minas Gerais">
+
+                    <div class="overlay">
+                        <p>
+                            Inspirado em Minas Gerais, valoriza a cozinha
+                            tradicional, com preparos caseiros e sabores
+                            acolhedores que remetem à memória e ao cuidado.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="estado">
+                    <img src="pará.png" alt="Pará">
+
+                    <div class="overlay">
+                        <p>
+                            Do Pará, incorpora ingredientes amazônicos
+                            marcantes, trazendo intensidade, originalidade e
+                            uma conexão com a natureza.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="estado">
+                    <img src="rio de janeiro.png" alt="Rio de Janeiro">
+
+                    <div class="overlay">
+                        <p>
+                            Com influência do Rio de Janeiro, aposta em
+                            leveza, frescor e combinações equilibradas,
+                            inspiradas pelo estilo de vida litorâneo.
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="combo">
-                <img src="combo1.png">
+        </section>
 
-                <h3>Manhã Leve</h3>
+        <section id="Contato">
+            <div class="linha"></div>
 
-                <p>
-                    Café colonial para uma pessoa.
-                </p>
+            <div class="contato-container">
+
+                <div class="contato-card">
+                    <i class="fa-regular fa-clock"></i>
+                    <div>
+                        <h3>Horário</h3>
+                        <p>Segunda a sábado: 6h30 às 23h</p>
+                        <p>Domingo: 7h às 16h</p>
+                    </div>
+                </div>
+
+                <div class="contato-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>Av. Atlântica, 2644</p>
+                        <p>Cavaleiros - Macaé/RJ</p>
+                    </div>
+                </div>
+
+                <div class="contato-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>(22) 99999-9999</p>
+                    </div>
+                </div>
+
+                <div class="contato-card">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h3>Instagram</h3>
+                        <p>@EguaQuemTremBao</p>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
+        </section>
 
-        <div class="btn-combos-area">
-            <button class="btn-combos">
-                Ver todos os combos
-            </button>
-        </div>
+        <section class="menu" id="Menu">
 
-    </div>
 
-</section>
-
-<section class="mais-vendidos">
-
-    <div class="destaque-item">
-
-        <h2>🔥 Mais Vendido</h2>
-
-        <div class="item-info">
-
-            <img src="tambaqui.png" alt="Caldeirada">
-
-            <div>
-                <h3>Caldeirada de Tambaqui</h3>
-
-                <p>
-                    Caldeirada amazônica feita com tambaqui
-                    fresco, legumes e temperos regionais,
-                    servida com arroz e pirão.
-                </p>
-
-                <span class="valor">R$ 64,90</span>
+            <div class="menu-header">
+                <h2>Menu</h2>
             </div>
 
-        </div>
+            <!-- CAFÉ DA MANHÃ -->
+            <div class="categoria">
+                <h3>Café da Manhã</h3>
 
-    </div>
+                <div class="menu-item">
+                    <img src="café da casa.png" alt="Café da Casa">
+                    <div class="menu-info">
+                        <h4>Café da Manhã da Casa</h4>
+                        <p>Pão de queijo, bolo de fubá com goiabada, iogurte, frutas regionais, café coado e suco.</p>
+                    </div>
+                    <span class="preco">R$ 69,90</span>
+                </div>
 
-    <div class="divisor"></div>
-
-    <div class="destaque-item">
-
-        <h2>⭐ Em Destaque</h2>
-
-        <div class="item-info">
-
-            <img src="gateau.png" alt="Gateau">
-
-            <div>
-                <h3>Gateau da Casa</h3>
-
-                <p>
-                    Petit gateau com sorvete de
-                    graviola.
-                </p>
-
-                <span class="valor">R$ 16,90</span>
+                <div class="menu-item">
+                    <img src="manhã leve.png" alt="Manhã Leve">
+                    <div class="menu-info">
+                        <h4>Manhã Leve</h4>
+                        <p>Tapioca, frutas frescas, café e suco natural.</p>
+                    </div>
+                    <span class="preco">R$ 59,90</span>
+                </div>
             </div>
 
-        </div>
+            <!-- PRATOS PRINCIPAIS -->
+            <div class="categoria">
+                <h3>Pratos Principais</h3>
 
-    </div>
+                <div class="menu-item">
+                    <img src="frango com quiabo.png">
+                    <div class="menu-info">
+                        <h4>Frango com Quiabo</h4>
+                        <p>Frango caipira com quiabo, arroz branco e angu cremoso.</p>
+                    </div>
+                    <span class="preco">R$ 34,90</span>
+                </div>
 
-</section>
+                <div class="menu-item">
+                    <img src="costelinha na brasa.png">
+                    <div class="menu-info">
+                        <h4>Costelinha na Brasa</h4>
+                        <p>Costelinha barbecue, mandioca frita e farofa mineira.</p>
+                    </div>
+                    <span class="preco">R$ 42,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="vaca atolada.png">
+                    <div class="menu-info">
+                        <h4>Vaca Atolada</h4>
+                        <p>Costela com mandioca servida com arroz branco e farinha.</p>
+                    </div>
+                    <span class="preco">R$ 39,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="bambá mineiro.png">
+                    <div class="menu-info">
+                        <h4>Bambá Mineiro</h4>
+                        <p>Bambá de couve com torresmo e couve refogada.</p>
+                    </div>
+                    <span class="preco">R$ 32,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="galinhada da orla.png">
+                    <div class="menu-info">
+                        <h4>Galinhada da Orla</h4>
+                        <p>Galinhada com arroz e toque de limão.</p>
+                    </div>
+                    <span class="preco">R$ 36,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="pato no tucupi.png">
+                    <div class="menu-info">
+                        <h4>Pato no Tucupi</h4>
+                        <p>Servido com arroz paraense e farinha.</p>
+                    </div>
+                    <span class="preco">R$ 49,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="maniçoba.png">
+                    <div class="menu-info">
+                        <h4>Maniçoba da Casa</h4>
+                        <p>Com arroz branco e farinha paraense.</p>
+                    </div>
+                    <span class="preco">R$ 44,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="vatapá.png">
+                    <div class="menu-info">
+                        <h4>Vatapá</h4>
+                        <p>Cremoso e intenso, servido com arroz branco.</p>
+                    </div>
+                    <span class="preco">R$ 37,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="tacacá.png">
+                    <div class="menu-info">
+                        <h4>Tacacá</h4>
+                        <p>Caldo quente de tucupi com jambu e camarão seco.</p>
+                    </div>
+                    <span class="preco">R$ 22,90</span>
+                </div>
+            </div>
+
+            <!-- ACOMPANHAMENTOS -->
+            <div class="categoria">
+                <h3>Acompanhamentos</h3>
+
+                <div class="cards">
+                    <div class="card">
+                        <img src="arroz paraense.png">
+                        <h3>Arroz Paraense</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="mandioca.png">
+                        <h3>Mandioca/Aipim</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="farofa mineira.png">
+                        <h3>Farofa Mineira</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="torresmo.png">
+                        <h3>Torresmo</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="angu.png">
+                        <h3>Angu</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="farinha pará.png">
+                        <h3>Farinha Paraense</h3>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOBREMESAS -->
+            <div class="categoria">
+                <h3>Sobremesas</h3>
+
+                <div class="menu-item">
+                    <img src="doce encanto.png">
+                    <div class="menu-info">
+                        <h4>Doce Encanto Brasileiro</h4>
+                        <p>Queijo com goiabada, doce de leite, canjica e brigadeiro.</p>
+                    </div>
+                    <span class="preco">R$ 19,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="rabanada da casa.png">
+                    <div class="menu-info">
+                        <h4>Rabanada Tropical</h4>
+                        <p>Rabanada quente com sorvete de cupuaçu finalizado com doce de leite.</p>
+                    </div>
+                    <span class="preco">R$ 21,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="acai tradicional.png">
+                    <div class="menu-info">
+                        <h4>Açaí Tradicional</h4>
+                        <p>Polpa de açaí servida na forma original paraense.</p>
+                    </div>
+                    <span class="preco">R$ 16,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="tropical carioca.png">
+                    <div class="menu-info">
+                        <h4>Tropical Carioca</h4>
+                        <p>Açaí com frutas e creme de bacuri.</p>
+                    </div>
+                    <span class="preco">R$ 18,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="gateau.png">
+                    <div class="menu-info">
+                        <h4>Gateau da Casa</h4>
+                        <p>Petit gateau com sorvete de graviola.</p>
+                    </div>
+                    <span class="preco">R$ 16,90</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="clássicos da casa.png">
+                    <div class="menu-info">
+                        <h4>Clássicos da Casa</h4>
+                        <p>Doce de abóbora, mingau de milho verde, canjica doce, mousse de cupuaçu e castanha-do-pará.
+                        </p>
+                    </div>
+                    <span class="preco">R$ 24,90</span>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
     </main>
 
 
