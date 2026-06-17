@@ -1,0 +1,28 @@
+function adicionarCarrinho(nome, preco, imagem){
+
+    let carrinho =
+    JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    carrinho.push({
+        nome: nome,
+        preco: preco,
+        imagem: imagem,
+        quantidade: 1
+    });
+
+    localStorage.setItem(
+        "carrinho",
+        JSON.stringify(carrinho)
+    );
+
+    document.getElementById("contador").innerText =
+    carrinho.length;
+
+    alert(nome + " foi adicionado ao carrinho!");
+}
+
+let carrinho =
+JSON.parse(localStorage.getItem("carrinho")) || [];
+
+document.getElementById("contador").innerText =
+carrinho.length;
