@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
+<a href="#" class="btn-topo">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
 
 <body>
 
@@ -27,12 +30,20 @@
                 <li><a href="#Contato">Contato</a></li>
             </ul>
             <button class="btn-reserva">Reservar mesa</button>
+
+            <div class="carrinho">
+                <a href="carrinho.html">
+                    🛒 <span id="contador"></span>
+                </a>
+            </div>
+
         </nav>
 
     </header>
 
     <main>
 
+        <!-- INÍCIO -->
         <section class="hero">
 
             <div class="content">
@@ -84,6 +95,7 @@
             </section>
         </section>
 
+        <!-- DESTAQUES -->
         <section class="destaques">
 
             <h2>Destaques da Casa</h2>
@@ -105,6 +117,12 @@
                     </p>
 
                     <span class="preco">R$ 64,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Caldeirada de Tambaqui', 64.90, 'tambaqui.png')">
+                        Adicionar ao carrinho
+                    </button>
+
                 </div>
 
                 <div class="card">
@@ -115,6 +133,12 @@
                     <p>Feijoada tradicional com arroz, couve, farofa e laranja.</p>
 
                     <span class="preco">R$ 49,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Feijoada Completa', 49.90, 'feijoada completa.png')">
+                        Adicionar ao carrinho
+                    </button>
+
                 </div>
 
                 <div class="card">
@@ -125,6 +149,12 @@
                     <p>Frango suculento com quiabo refogado e tempero caseiro.</p>
 
                     <span class="preco">R$ 49,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Frango com Quiabo', 49.90, 'frango com quiabo.png')">
+                        Adicionar ao carrinho
+                    </button>
+
                 </div>
 
                 <div class="card">
@@ -135,6 +165,12 @@
                     <p>Feijão tropeiro com linguiça, ovos e farinha.</p>
 
                     <span class="preco">R$ 39,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Feijão Tropeiro', 39.90, 'feijão tropeiro.png')">
+                        Adicionar ao carrinho
+                    </button>
+
                 </div>
 
             </div>
@@ -149,6 +185,7 @@
 
         </section>
 
+        <!-- PROMOÇÕES -->
         <section class="ofertas">
 
             <div class="promocoes-box">
@@ -181,7 +218,7 @@
 
             </div>
 
-
+            <!-- COMBOS -->
             <section id="Combos">
                 <div class="combos-box">
 
@@ -200,6 +237,10 @@
                                 Café colonial juntando o melhor
                                 das nossas regiões.
                             </p>
+                            <button class="btn-carrinho"
+                                onclick="adicionarCarrinho('Café da Casa', 69.90, 'café da casa.png')">
+                                Adicionar ao carrinho
+                            </button>
                         </div>
 
                         <div class="combo">
@@ -211,6 +252,9 @@
                                 2 pratos principais +
                                 2 acompanhamentos
                             </p>
+                            <button class="btn-carrinho" onclick="adicionarCarrinho('Combo 1', 89.90, 'combo1.png')">
+                                Adicionar ao carrinho
+                            </button>
                         </div>
 
                         <div class="combo">
@@ -221,6 +265,9 @@
                             <p>
                                 Café colonial para uma pessoa.
                             </p>
+                            <button class="btn-carrinho" onclick="adicionarCarrinho('Manhã Leve', 59.90, 'combo1.png')">
+                                Adicionar ao carrinho
+                            </button>
                         </div>
 
                     </div>
@@ -230,6 +277,7 @@
 
         </section>
 
+        <!-- MAIS VENDIDOS -->
         <section class="mais-vendidos">
 
             <div class="destaque-item">
@@ -250,6 +298,10 @@
                         </p>
 
                         <span class="valor">R$ 64,90</span>
+                        <button class="btn-carrinho"
+                            onclick="adicionarCarrinho('Caldeirada de Tambaqui', 64.90, 'tambaqui.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                 </div>
@@ -275,6 +327,9 @@
                         </p>
 
                         <span class="valor">R$ 16,90</span>
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Gateau da Casa', 16.90, 'gateau.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                 </div>
@@ -283,7 +338,7 @@
 
         </section>
 
-
+        <!-- SOBRE -->
         <section id="Sobre">
             <div class="sobre">
 
@@ -329,6 +384,7 @@
 
         </section>
 
+        <!-- CONTATO -->
         <section id="Contato">
             <div class="linha"></div>
 
@@ -390,6 +446,11 @@
                         <p>Pão de queijo, bolo de fubá com goiabada, iogurte, frutas regionais, café coado e suco.</p>
                     </div>
                     <span class="preco">R$ 69,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Café da Manhã da Casa', 69.90, 'café da casa.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -399,6 +460,10 @@
                         <p>Tapioca, frutas frescas, café e suco natural.</p>
                     </div>
                     <span class="preco">R$ 59,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Manhã Leve', 59.90, 'manhã leve.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
             </div>
 
@@ -413,6 +478,11 @@
                         <p>Frango caipira com quiabo, arroz branco e angu cremoso.</p>
                     </div>
                     <span class="preco">R$ 34,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Frango com Quiabo', 34.90, 'frango com quiabo.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -422,6 +492,11 @@
                         <p>Costelinha barbecue, mandioca frita e farofa mineira.</p>
                     </div>
                     <span class="preco">R$ 42,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Costelinha na Brasa', 42.90, 'costelinha na brasa.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -431,6 +506,10 @@
                         <p>Costela com mandioca servida com arroz branco e farinha.</p>
                     </div>
                     <span class="preco">R$ 39,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Vaca Atolada', 39.90, 'vaca atolada.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -440,6 +519,11 @@
                         <p>Bambá de couve com torresmo e couve refogada.</p>
                     </div>
                     <span class="preco">R$ 32,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Bambá Mineiro', 32.90, 'bambá mineiro.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -449,6 +533,11 @@
                         <p>Galinhada com arroz e toque de limão.</p>
                     </div>
                     <span class="preco">R$ 36,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Galinhada da Orla', 36.90, 'galinhada da orla.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -458,6 +547,11 @@
                         <p>Servido com arroz paraense e farinha.</p>
                     </div>
                     <span class="preco">R$ 49,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Pato no Tucupi', 49.90, 'pato no tucupi.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -467,6 +561,10 @@
                         <p>Com arroz branco e farinha paraense.</p>
                     </div>
                     <span class="preco">R$ 44,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Maniçoba da Casa', 44.90, 'maniçoba.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -476,6 +574,10 @@
                         <p>Cremoso e intenso, servido com arroz branco.</p>
                     </div>
                     <span class="preco">R$ 37,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Vatapá', 37.90, 'vatapá.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -485,6 +587,10 @@
                         <p>Caldo quente de tucupi com jambu e camarão seco.</p>
                     </div>
                     <span class="preco">R$ 22,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Tacacá', 22.90, 'tacacá.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
             </div>
 
@@ -497,36 +603,64 @@
                         <img src="arroz paraense.png">
                         <h3>Arroz Paraense</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho"
+                            onclick="adicionarCarrinho('Arroz Paraense', 9.90, 'arroz paraense.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                     <div class="card">
                         <img src="mandioca.png">
                         <h3>Mandioca/Aipim</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho"
+                            onclick="adicionarCarrinho('Mandioca/Aipim', 9.90, 'mandioca.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                     <div class="card">
                         <img src="farofa mineira.png">
                         <h3>Farofa Mineira</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho"
+                            onclick="adicionarCarrinho('Farofa Mineira', 9.90, 'farofa mineira.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                     <div class="card">
                         <img src="torresmo.png">
                         <h3>Torresmo</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Torresmo', 9.90, 'torresmo.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                     <div class="card">
                         <img src="angu.png">
                         <h3>Angu</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho" onclick="adicionarCarrinho('Angu', 9.90, 'angu.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
 
                     <div class="card">
                         <img src="farinha pará.png">
                         <h3>Farinha Paraense</h3>
                         <span class="preco">R$ 9,90</span>
+
+                        <button class="btn-carrinho"
+                            onclick="adicionarCarrinho('Farinha Paraense', 9.90, 'farinha pará.png')">
+                            Adicionar ao carrinho
+                        </button>
                     </div>
                 </div>
             </div>
@@ -542,6 +676,11 @@
                         <p>Queijo com goiabada, doce de leite, canjica e brigadeiro.</p>
                     </div>
                     <span class="preco">R$ 19,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Doce Encanto Brasileiro', 19.90, 'doce encanto.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -551,6 +690,11 @@
                         <p>Rabanada quente com sorvete de cupuaçu finalizado com doce de leite.</p>
                     </div>
                     <span class="preco">R$ 21,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Rabanada Tropical', 21.90, 'rabanada da casa.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -560,6 +704,11 @@
                         <p>Polpa de açaí servida na forma original paraense.</p>
                     </div>
                     <span class="preco">R$ 16,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Açaí Tradicional', 16.90, 'acai tradicional.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -569,6 +718,11 @@
                         <p>Açaí com frutas e creme de bacuri.</p>
                     </div>
                     <span class="preco">R$ 18,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Tropical Carioca', 18.90, 'tropical carioca.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -578,6 +732,10 @@
                         <p>Petit gateau com sorvete de graviola.</p>
                     </div>
                     <span class="preco">R$ 16,90</span>
+
+                    <button class="btn-carrinho" onclick="adicionarCarrinho('Gateau da Casa', 16.90, 'gateau.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
                 <div class="menu-item">
@@ -588,16 +746,20 @@
                         </p>
                     </div>
                     <span class="preco">R$ 24,90</span>
+
+                    <button class="btn-carrinho"
+                        onclick="adicionarCarrinho('Clássicos da Casa', 24.90, 'clássicos da casa.png')">
+                        Adicionar ao carrinho
+                    </button>
                 </div>
 
             </div>
 
-
         </section>
-
 
     </main>
 
+    <script src="server.js"></script>
 
 </body>
 
