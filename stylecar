@@ -1,0 +1,288 @@
+body{
+    background:#fff8e7;
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:#333;
+}
+
+h1{
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:40px;
+    color:#6b2717;
+    font-size:55px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.carrinho-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+}
+
+#listaCarrinho{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.produto{
+    display:grid;
+    grid-template-columns:120px 1fr auto auto auto;
+    align-items:center;
+    gap:20px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #e2d7ca;
+}
+
+.produto img{
+    width:120px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.produto h3{
+    margin:0;
+    color:#6b2717;
+    font-size:24px;
+}
+
+.resumo{
+    background:white;
+    border-radius:15px;
+    border:1px solid #e2d7ca;
+    padding:30px;
+    height:fit-content;
+}
+
+.resumo h2{
+    color:#6b2717;
+    margin-top:0;
+}
+
+.resumo p{
+    display:flex;
+    justify-content:space-between;
+    margin:18px 0;
+}
+
+.total{
+    font-size:28px;
+    font-weight:bold;
+    color:#920501;
+}
+
+.resumo button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#920501;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.resumo button:hover{
+    background:#b3201c;
+}
+
+.quantidade{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.quantidade button{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:8px;
+    background:#920501;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.quantidade button:hover{
+    background:#b3201c;
+}
+
+.quantidade span{
+    min-width:25px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.subtotal{
+    font-size:20px;
+    font-weight:bold;
+    color:#6b2717;
+}
+
+.btn-remover{
+    border:none;
+    background:#d62828;
+    color:white;
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.btn-remover:hover{
+    background:#b00020;
+}
+
+.entrega,
+.entregador{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    background:white;
+    border:1px solid #e2d7ca;
+    border-radius:15px;
+    padding:30px;
+}
+
+.endereco{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 200px;
+    gap:15px;
+}
+
+.endereco input{
+    padding:15px;
+    border:1px solid #d6c6b1;
+    border-radius:8px;
+}
+
+.status{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:30px;
+}
+
+.status div{
+    flex:1;
+    padding:15px;
+    border-radius:50px;
+    background:#ddd;
+    text-align:center;
+}
+
+.ativo{
+    background:#920501 !important;
+    color:white;
+}
+
+@media(max-width:900px){
+
+    .carrinho-container{
+        grid-template-columns:1fr;
+    }
+
+    .produto{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .status{
+        flex-direction:column;
+    }
+
+    .endereco{
+        grid-template-columns:1fr;
+    }
+}
+
+.acoes-carrinho{
+    width:90%;
+    max-width:1200px;
+
+    margin:0 auto 30px auto;
+}
+
+.btn-continuar{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border:2px solid #920501;
+
+    border-radius:10px;
+
+    color:#920501;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.btn-continuar:hover{
+    background:#920501;
+    color:white;
+}
+
+.btn-topo{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:55px;
+    height:55px;
+    background:#920501;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:22px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+    z-index:999;
+}
+
+.btn-topo:hover{
+    background:#b3201c;
+    transform:translateY(-5px);
+}
+
+.btn-limpar{
+    width:100%;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d62828;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.btn-limpar:hover{
+    background:#b00020;
+}
