@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+
+    <link rel="stylesheet" href="stylecar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<a href="#" class="btn-topo">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<body>
+
+    <h1>Meu Carrinho</h1>
+
+    <div class="acoes-carrinho">
+
+    <a href="inicio.html" class="btn-continuar">
+        <i class="fa-solid fa-arrow-left"></i>
+        Continuar comprando
+    </a>
+
+</div>
+
+</div>
+
+    <div class="carrinho-container">
+
+        <div id="listaCarrinho"></div>
+
+        <div class="resumo">
+
+            <h2>Resumo do Pedido</h2>
+
+            <p>
+                <span>Subtotal</span>
+                <span id="subtotal">R$ 0,00</span>
+            </p>
+
+            <p>
+                <span>Entrega</span>
+                <span>R$ 9,90</span>
+            </p>
+
+            <p class="total">
+                <span>Total</span>
+                <span id="total">R$ 0,00</span>
+            </p>
+
+            <button>
+                <i class="fa-solid fa-lock"></i>
+                Finalizar Pedido
+            </button>
+
+            <button class="btn-limpar" onclick="limparCarrinho()">
+                <i class="fa-solid fa-trash"></i>
+                Limpar Carrinho
+            </button>
+
+        </div>
+
+    </div>
+
+    <section class="entrega">
+
+        <h2>Forma de Entrega</h2>
+
+        <label>
+            <input type="radio" name="tipo" checked>
+            Entrega em domicílio
+        </label>
+
+        <br>
+
+        <label>
+            <input type="radio" name="tipo">
+            Retirar no restaurante
+        </label>
+
+    </section>
+
+    <section class="endereco">
+
+        <input type="text" placeholder="CEP">
+        <input type="text" placeholder="Rua">
+        <input type="text" placeholder="Número">
+
+    </section>
+
+    <section class="entregador">
+
+        <h3>Entregador</h3>
+
+        <p>João Pedro</p>
+
+        <p>⭐ 4.9</p>
+
+        <p>(11) 99999-9999</p>
+
+    </section>
+
+<script>
+
+let carrinho =
+JSON.parse(localStorage.getItem("carrinho")) || [];
+
+let lista =
+document.getElementById("listaCarrinho");
+
+function atualizarCarrinho(){
+
+    lista.innerHTML = "";
+
+    let subtotal = 0;
+
+    carrinho.forEach((produto,index)=>{
+
+        if(!produto.quantidade){
+            produto.quantidade = 1;
+        }
+
+        subtotal += produto.preco * produto.quantidade;
+
+        lista.innerHTML += `
+
+        <div class="produto">
+
+            <img src="${produto.imagem}" alt="${produto.nome}">
+
+            <div>
+
+                <h3>${produto.nome}</h3>
+
+                <p>R$ ${produto.preco.toFixed(2)}</p>
+
+            </div>
+
+            <div class="quantidade">
+
+                <button onclick="diminuir(${index})">-</button>
+
+                <span>${produto.quantidade}</span>
+
+                <button onclick="aumentar(${index})">+</button>
+
+            </div>
+
+            <div class="subtotal">
+
+                R$ ${(produto.preco * produto.quantidade).toFixed(2)}
+
+            </div>
+
+            <button class="btn-remover"
+                    onclick="removerItem(${index})">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </div>
+
+        `;
+    });
+
+    document.getElementById("subtotal").innerText =
+    `R$ ${subtotal.toFixed(2)}`;
+
+    document.getElementById("total").innerText =
+    `R$ ${(subtotal + 9.90).toFixed(2)}`;
+
+    localStorage.setItem(
+        "carrinho",
+        JSON.stringify(carrinho)
+    );
+}
+
+function aumentar(index){
+    carrinho[index].quantidade++;
+    atualizarCarrinho();
+}
+
+function diminuir(index){
+
+    if(carrinho[index].quantidade > 1){
+        carrinho[index].quantidade--;
+    }
+
+    atualizarCarrinho();
+}
+
+function removerItem(index){
+    carrinho.splice(index,1);
+    atualizarCarrinho();
+}
+
+function removerItem(index){
+    carrinho.splice(index,1);
+    atualizarCarrinho();
+}
+
+function limparCarrinho(){
+
+    if(confirm("Deseja realmente limpar o carrinho?")){
+
+        carrinho = [];
+
+        localStorage.removeItem("carrinho");
+
+        atualizarCarrinho();
+
+    }
+}
+
+atualizarCarrinho();
+
+atualizarCarrinho();
+
+</script>
+
+</body>
+</html>
